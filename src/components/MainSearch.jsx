@@ -43,7 +43,7 @@ export default function MainSearch() {
             type="text"
           ></input>
         </div>
-        <BottomDisplay main={data.main} />
+        <BottomDisplay main={data.main} sys={data.sys} />
       </Container>
     </>
   )
