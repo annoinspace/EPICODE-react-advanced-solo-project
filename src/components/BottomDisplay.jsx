@@ -7,7 +7,7 @@ export default function BottomDisplay({ main, sys }) {
   const newsunset = fromUnixTime(sys.sunset)
 
   return (
-    <Row className=" mb-5 p-1 bottom-section">
+    <Row className=" mb-5 mt-5 p-1 bottom-section">
       <Col xs={12} className="sunrise-wrapper mb-3">
         <div>
           <div>
@@ -27,11 +27,11 @@ export default function BottomDisplay({ main, sys }) {
         xs={12}
         className="d-flex justify-content-center align-items-center bottom"
       >
-        <div className="feels mr-3">
-          {main ? <p>{main.feels_like.toFixed(1)}°C</p> : null}
+        <div className="feels mr-1">
+          {main ? <p>Feels Like: {main.feels_like.toFixed(1)}°C</p> : null}
         </div>
-        <div className="humidity ml-3">
-          {main ? <p>{main.humidity}%</p> : null}
+        <div className="humidity ml-1">
+          {main ? <p>Humidity: {main.humidity}%</p> : null}
         </div>
       </Col>
     </Row>
