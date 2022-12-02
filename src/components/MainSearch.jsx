@@ -1,7 +1,7 @@
 import axios from "axios"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import React from "react"
-// import TopDisplay from "./TopDisplay"
+import TopDisplay from "./TopDisplay"
 import BottomDisplay from "./BottomDisplay"
 import { useState } from "react"
 
@@ -26,19 +26,14 @@ export default function MainSearch() {
 
   return (
     <>
-      <Container className="h-100 d-flex flex-column justify-content-between">
-        {/* <TopDisplay city={data.name} /> */}
-        <Row className="top mt-5">
-          <Col xs={12}>
-            <p>{data.name}</p>
-            <div className="temperature">
-              {data.main ? <h1>{data.main.temp}°C</h1> : null}
-            </div>
-            <div className="description">
-              {data.weather ? <p>{data.weather[0].main}</p> : null}
-            </div>
-          </Col>
-        </Row>
+      <Container className="h-100 d-flex flex-column justify-content-between main">
+        <TopDisplay
+          name={data.name}
+          weather={data.weather}
+          main={data.main}
+          sys={data.sys}
+        />
+
         <div className="search">
           <input
             value={location}
@@ -48,7 +43,7 @@ export default function MainSearch() {
             type="text"
           ></input>
         </div>
-        <BottomDisplay />
+        <BottomDisplay main={data.main} />
       </Container>
     </>
   )
