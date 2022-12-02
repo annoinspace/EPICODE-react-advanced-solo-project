@@ -74,13 +74,39 @@ h1 {
 
 /* styling on components */
 
+.bottom-section {
+  max-width: 95%;
+}
+
 .bottom {
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 25px;
+  border-radius: 50px;
 }
 
 .main {
-  border: 1px solid black;
+  border-radius: 40px;
   width: 40vw;
-  max-height: 90vh;
+  max-height: 80vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sunrise-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent;
+  color: white;
+}
+
+input[type="text"] {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.icon-display {
+  font-size: 2vw;
 }
