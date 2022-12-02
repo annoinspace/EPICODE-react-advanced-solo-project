@@ -1,16 +1,16 @@
 import React from "react"
 import { Row, Col } from "react-bootstrap"
 
-export default function TopDisplay() {
+export default function TopDisplay(data) {
   return (
     <Row className="top mt-5">
       <Col xs={12}>
-        <p>London</p>
+        <p>{data.name}</p>
         <div className="temperature">
-          <h1>7°C</h1>
+          {data.main ? <h1>{data.main.temp}°C</h1> : null}
         </div>
         <div className="description">
-          <p>A little bit of fog on the horizon</p>
+          {data.weather ? <p>{data.weather[0].main}</p> : null}
         </div>
       </Col>
     </Row>
