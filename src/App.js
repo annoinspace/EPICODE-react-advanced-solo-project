@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import axios from "axios"
+import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
+import MainSearch from "./components/MainSearch"
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <MainSearch />
     </div>
   )
 }
