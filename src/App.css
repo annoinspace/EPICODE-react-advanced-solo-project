@@ -64,12 +64,12 @@
 /* styling on elements */
 
 p {
-  font-size: 2vw;
+  font-size: 15px;
   margin-bottom: 0;
 }
 
 h1 {
-  font-size: 7vw;
+  font-size: 70px;
 }
 
 /* styling on components */
@@ -86,7 +86,7 @@ h1 {
 
 .main {
   border-radius: 40px;
-  width: 40vw;
+  width: 400px;
   max-height: 80vh;
   background-color: rgba(0, 0, 0, 0.3);
 }
