@@ -1,4 +1,3 @@
-import React from "react"
 import { Row, Col } from "react-bootstrap"
 import {
   BsFillCloudsFill,
@@ -12,20 +11,26 @@ import {
 import { RiMistFill } from "react-icons/ri"
 
 export default function TopDisplay({ name, weather, main, sys }) {
-  const description = weather[0].description
-
   return (
     <Row className="top mt-5">
       <Col xs={12}>
-        <div classname="icon-display mb-2">
-          {description.includes("cloud") ? <BsFillCloudsFill /> : null}
-          {description.includes("haze") ? <BsCloudHaze1 /> : null}
-          {description.includes("clear") ? <BsSun /> : null}
-          {description.includes("rain") ? <BsCloudRain /> : null}
-          {description.includes("mist") ? <RiMistFill /> : null}
-          {description.includes("lightning") ? <BsCloudLightning /> : null}
-          {description.includes("smoke") ? <BsFillCloudHaze2Fill /> : null}
-        </div>
+        {weather ? (
+          <div className="icon-display mb-2">
+            {weather[0].description.includes("cloud") ? (
+              <BsFillCloudsFill />
+            ) : null}
+            {weather[0].description.includes("haze") ? <BsCloudHaze1 /> : null}
+            {weather[0].description.includes("clear") ? <BsSun /> : null}
+            {weather[0].description.includes("rain") ? <BsCloudRain /> : null}
+            {weather[0].description.includes("mist") ? <RiMistFill /> : null}
+            {weather[0].description.includes("lightning") ? (
+              <BsCloudLightning />
+            ) : null}
+            {weather[0].description.includes("smoke") ? (
+              <BsFillCloudHaze2Fill />
+            ) : null}
+          </div>
+        ) : null}
         <div className="mt-2">
           {sys ? (
             <p>
@@ -38,7 +43,7 @@ export default function TopDisplay({ name, weather, main, sys }) {
           {main ? <h1>{main.temp.toFixed(1)}°C</h1> : null}
         </div>
         <div className="description">
-          {weather ? <p>{description}</p> : null}
+          {weather ? <p>{weather[0].description}</p> : null}
         </div>
       </Col>
     </Row>
