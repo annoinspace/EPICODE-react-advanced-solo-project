@@ -4,17 +4,6 @@ import axios from "axios"
 import TopDisplay from "./TopDisplay"
 import BottomDisplay from "./BottomDisplay"
 import { useState } from "react"
-// import { fromUnixTime } from "date-fns"
-// import {
-//   BsFillCloudsFill,
-//   BsSun,
-//   BsCloudHaze1,
-//   BsCloudRain,
-//   BsCloudLightning,
-//   BsFillCloudHaze2Fill
-// } from "react-icons/bs"
-
-// import { RiMistFill } from "react-icons/ri"
 
 export default function MainSearch() {
   const [data, setData] = useState("")
@@ -36,9 +25,6 @@ export default function MainSearch() {
       setLoading(false)
     }
   }
-
-  //   const newsunrise = fromUnixTime(data.sys.sunrise)
-  //   const newsunset = fromUnixTime(data.sys.sunset)
 
   return (
     <Container className="h-100 d-flex flex-column justify-content-between align-items-center main">
