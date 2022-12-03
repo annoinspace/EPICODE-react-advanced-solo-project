@@ -73,22 +73,64 @@ h1 {
 }
 
 /* styling on components */
-
-.bottom-section {
-  max-width: 95%;
+.search {
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  position: relative;
 }
 
-.bottom {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 50px;
-  padding: 5px;
+.main:hover .search {
+  margin-top: 20px;
 }
 
 .main {
+  width: 400px;
+  max-height: 400px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: max-height, border-radius 2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main:hover {
   border-radius: 40px;
   width: 400px;
   max-height: 80vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main:hover .bottom-section {
+  max-width: 95%;
+}
+
+.top {
+  display: none;
+}
+
+.main:hover .top {
+  display: block;
+}
+
+.bottom-section {
+  display: none;
+}
+.main:hover .bottom-section {
+  display: block;
+}
+
+.bottom {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 5px;
 }
 
 .sunrise-wrapper {
@@ -96,17 +138,11 @@ h1 {
   justify-content: space-between;
 }
 
-.search {
-  text-align: center;
-  padding: 1rem;
-  background-color: transparent;
-  color: white;
-  border-radius: 10px;
-}
-
 ::placeholder {
   color: white;
-  opacity: 1; /* Firefox */
+  opacity: 0.7; /* Firefox */
+  font-size: 12px;
+  padding-left: 9px;
 }
 
 input[type="text"] {

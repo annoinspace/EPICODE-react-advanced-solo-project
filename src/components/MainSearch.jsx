@@ -27,13 +27,13 @@ export default function MainSearch() {
   }
 
   return (
-    <Container className="h-100 d-flex flex-column justify-content-between align-items-center main">
-      <div className="search mt-5">
+    <Container className="h-100 main">
+      <div className="search">
         <input
           value={location}
           onChange={(event) => setLocation(event.target.value)}
           onKeyDown={searchLocation}
-          placeholder="search ..."
+          placeholder="what is the weather like today?"
           type="text"
         ></input>
       </div>
