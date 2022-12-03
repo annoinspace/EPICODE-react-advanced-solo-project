@@ -54,7 +54,7 @@ export default function MainSearch() {
       {loading ? (
         <></>
       ) : (
-        <div>
+        <>
           <TopDisplay
             name={data.name}
             weather={data.weather}
@@ -63,7 +63,7 @@ export default function MainSearch() {
           />
 
           <BottomDisplay main={data.main} sys={data.sys} />
-        </div>
+        </>
       )}
     </Container>
   )

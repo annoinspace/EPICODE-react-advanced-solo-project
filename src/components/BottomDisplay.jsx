@@ -1,3 +1,4 @@
+import React from "react"
 import { Row, Col } from "react-bootstrap"
 import { fromUnixTime } from "date-fns"
 
@@ -12,14 +13,14 @@ export default function BottomDisplay({ main, sys }) {
           <div>
             <p>Sunrise</p>
           </div>
-          {sys ? <p>{fromUnixTime(sys.sunrise)}</p> : null}
+          {sys ? <p>{fromUnixTime(sys.sunrise).toLocaleTimeString()}</p> : null}
         </div>
         <div>
           <div>
             {" "}
             <p>Sunset</p>
           </div>
-          {sys ? <p>{fromUnixTime(sys.sunset)}</p> : null}
+          {sys ? <p>{fromUnixTime(sys.sunset).toLocaleTimeString()}</p> : null}
         </div>
       </Col>
       <Col

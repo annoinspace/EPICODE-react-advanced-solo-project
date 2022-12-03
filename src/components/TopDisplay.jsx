@@ -14,7 +14,7 @@ export default function TopDisplay({ name, weather, main, sys }) {
   return (
     <Row className="top mt-5">
       <Col xs={12}>
-        {/* {weather ? (
+        {weather ? (
           <div className="icon-display mb-2">
             {weather[0].description.includes("cloud") ? (
               <BsFillCloudsFill />
@@ -30,7 +30,7 @@ export default function TopDisplay({ name, weather, main, sys }) {
               <BsFillCloudHaze2Fill />
             ) : null}
           </div>
-        ) : null} */}
+        ) : null}
         <div className="mt-2">
           {sys ? (
             <p>
